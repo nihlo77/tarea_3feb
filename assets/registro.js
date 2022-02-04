@@ -8,8 +8,7 @@ function registro() {
     let age = document.getElementById('age').value
     let mobile = document.getElementById('mobile').value
     let emergencyMobile = document.getElementById('emergencyMobile').value
-    let hoy = new Date
-
+   
     if (!name) {
         return `falta nombre`
     } else if (!lastname) {
@@ -28,14 +27,14 @@ function registro() {
         return `falta celular de emergencia`
     }
 
-    if (age < 18) {
+    if (age < 18) { 
         return `es menor de 18 años`
     }
     let today = new Date
     if (today.getDay() == 4 && gender !== "femenino") {
         return `acceso denegado, Hoy solo pueden entrar mujeres`
     }
-    if (today.getDate() == 5 && gender !== "Masculino") {
+    if (today.getDay() == 5 && gender !== "Masculino") {
         return `acceso denegado, Hoy solo pueden entrar hombres`
     }
 
