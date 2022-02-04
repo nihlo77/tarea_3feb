@@ -4,7 +4,7 @@ function registro() {
     let lastname = document.getElementById('lastname').value
     let identificaction = document.getElementById('identification').value
     let bloodType = document.getElementById('bloodType').value
-    let gender = document.getElementById('bloodType').value
+    let gender = document.getElementById('gender').value
     let age = document.getElementById('age').value
     let mobile = document.getElementById('mobile').value
     let emergencyMobile = document.getElementById('emergencyMobile').value
@@ -25,7 +25,17 @@ function registro() {
         return `falta celular`
     } else if (!emergencyMobile) {
         return `falta celular de emergencia`
-    }
+    } 
+
+  /*  console.log(name)
+    console.log(lastname)
+    console.log(identificaction)
+    console.log(bloodType)
+    console.log(gender)
+    console.log(age)
+    console.log(mobile)
+    console.log(emergencyMobile)*/
+
 
     if (age < 18) { 
         return `es menor de 18 años`
@@ -34,9 +44,9 @@ function registro() {
     if (today.getDay() == 4 && gender !== "femenino") {
         return `acceso denegado, Hoy solo pueden entrar mujeres`
     }
-    if (today.getDay() == 5 && gender !== "Masculino") {
+    if (today.getDay() == 5 && gender !== "masculino") {
         return `acceso denegado, Hoy solo pueden entrar hombres`
     }
 
     return `!!! PUEDE INGRESAR ¡¡¡`
-}
+} 
